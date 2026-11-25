@@ -1,0 +1,3 @@
+Python
+Visual Studio Code
+Git

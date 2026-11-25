@@ -8,3 +8,28 @@ salve cada nota em uma nova linha do arquivo `notas_finais_2026.txt`.
 """
 
 # TODO: Desenvolva o algoritmo abaixo:
+"""
+EXERCÍCIO 05: Consolidador de Notas em Arquivo
+"""
+
+notas = []
+
+# Leitura das notas dos 5 alunos
+for i in range(5):
+    nota = float(input(f"Digite a nota do aluno {i + 1}: "))
+    notas.append(nota)
+
+# Salvando as notas no arquivo
+nome_arquivo = "notas_finais_2026.txt"
+
+with open(nome_arquivo, "w", encoding="utf-8") as arquivo:
+    for nota in notas:
+        arquivo.write(str(nota) + "\n")
+
+print("\nNotas salvas com sucesso!")
+
+# Exibindo as notas registradas
+print("\n===== NOTAS FINAIS =====")
+
+for nota in notas:
+    print(nota)
